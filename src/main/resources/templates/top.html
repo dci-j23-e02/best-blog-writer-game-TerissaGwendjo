@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Top Blogs</title>
+</head>
+<body>
+<h1>Top Blogs</h1>
+<ul>
+    <li th:each="topEntry : ${topEntries}">
+        <p th:text="${topEntry.author} + ': ' + ${topEntry.text}"></p>
+    </li>
+</ul>
+<a href="/">Back to All Blogs</a>
+</body>
+</html>

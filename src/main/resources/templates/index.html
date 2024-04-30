@@ -1,0 +1,18 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Blogs</title>
+</head>
+<body>
+<h1>All Blogs</h1>
+<ul>
+    <li th:each="blogEntry : ${blogEntries}">
+        <p th:text="${blogEntry.author} + ': ' + ${blogEntry.text}"></p>
+    </li>
+</ul>
+<a href="/submit">Submit a Blog</a>
+<a href="/top">Top Entries</a>
+</body>
+</html>

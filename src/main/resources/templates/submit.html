@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Submit Blog</title>
+</head>
+<body>
+<h1>Submit a Blog</h1>
+<form th:action="@{/submit}" th:object="${blogEntry}" method="post">
+    Author: <input type="text" th:field="*{author}" /><br/>
+    Text: <textarea th:field="*{text}"></textarea><br/>
+    <input type="submit" value="Submit" />
+</form>
+<a href="/">Back to All Blogs</a>
+</body>
+</html>
